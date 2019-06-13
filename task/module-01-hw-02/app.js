@@ -21,18 +21,16 @@ let msg = prompt('Введите количество дроидов котор�
 
 if (msg === null) {
     msg = 'Отменено пользователем!';
-    console.log(typeof msg);
-} else {
-    const count = parseInt(msg);
-    totalPrice = count * pricePerDroid;
-
+    // console.log(typeof msg);
+} else if (msg > 0 || Number.isNaN(msg)) {
+    totalPrice = msg * pricePerDroid;
+    const remainder = credits - totalPrice;
     if (totalPrice > credits) {
         msg = ('Недостаточно средств на счету!');
     } else {
-        const remainder = credits - totalPrice;
         msg = (`Вы купили ${msg} дроидов, на счету осталось ${remainder} кредитов.`);
     }
-    console.log(typeof count);
+} else {
+    msg = 'Введите целое число больше нуля';
 }
-
 alert(msg);

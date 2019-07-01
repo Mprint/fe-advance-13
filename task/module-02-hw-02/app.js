@@ -1,4 +1,5 @@
-
+/* eslint-disable max-len */
+/* eslint-disable no-undef */
 /*
 Напиши скрипт имитирующий авторизацию пользователя.
 
@@ -15,13 +16,15 @@ let attemptsLeft = 3;
 */
 
 const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
-let attemptsLeft = 3;
+const attemptsLeft = 3;
 
-user = prompt('введите пароль')
-if(passwords.includes(user) === true){
-  alert('Добро пожаловать!');
-} else {
-  for (let i = 0, i < attemptsLeft, i += 1){
+for (let i = 0; i < attemptsLeft; i += 1) {
+  user = prompt('введите пароль');
+  n = attemptsLeft - i;
 
+  if (passwords.includes(user) === true) {
+    alert('Добро пожаловать!'); break;
+  } else {
+    alert(`Неверный пароль, у вас осталось ${n-1} попыток`);
   }
 }

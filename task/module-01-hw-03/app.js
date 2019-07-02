@@ -21,7 +21,7 @@ let price;
 switch (country.toLowerCase()) {
     case 'китай':
         price = '100';
-        alert(`Доставка в ${country} будет стоить ${price} кредитов`);
+        alert(`Доставка в ${country.toUpperCase()} будет стоить ${price} кредитов`);
         break;
 
     case 'южная америка':

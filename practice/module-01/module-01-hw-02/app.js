@@ -20,17 +20,17 @@ let totalPrice;
 let msg = prompt('Введите количество дроидов которые хотите приобрести');
 
 if (msg === null) {
-    msg = 'Отменено пользователем!';
-    // console.log(typeof msg);
+  msg = 'Отменено пользователем!';
+  // console.log(typeof msg);
 } else if (msg > 0 || Number.isNaN(msg)) {
-    totalPrice = msg * pricePerDroid;
-    const remainder = credits - totalPrice;
-    if (totalPrice > credits) {
-        msg = ('Недостаточно средств на счету!');
-    } else {
-        msg = (`Вы купили ${msg} дроидов, на счету осталось ${remainder} кредитов.`);
-    }
+  totalPrice = msg * pricePerDroid;
+  const remainder = credits - totalPrice;
+  if (totalPrice > credits) {
+    msg = ('Недостаточно средств на счету!');
+  } else {
+    msg = (`Вы купили ${msg} дроидов, на счету осталось ${remainder} кредитов.`);
+  }
 } else {
-    msg = 'Введите целое число больше нуля';
+  msg = 'Введите целое число больше нуля';
 }
 alert(msg);

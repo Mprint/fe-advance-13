@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /*
   Создай игру угадай число.
 
@@ -27,6 +28,7 @@ const num = prompt(`Введите цифру между ${min} и ${max}`);
 
 // eslint-disable-next-line eqeqeq
 if (numbers.includes(Number(num)) && num != min && num != max) {
+  // eslint-disable-next-line no-alert
   alert("Поздравляем, Вы угадали!");
 } else {
   alert("Сожалеем, Вы не угадали!");

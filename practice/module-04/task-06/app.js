@@ -24,7 +24,17 @@ const users = [
   { name: 'Ajax', age: 3, mood: 'tired' },
 ];
 
+const resName = getAllPropValues(users, 'name');
+
+console.assert(
+  resName.length === 3
+  && resName[0] === 'Poly'
+  && resName[1] === 'Mango'
+  && resName[2] === 'Ajax',
+  'Error name',
+);
 // Вызовы функции для проверки
+
 console.log(getAllPropValues(users, 'name')); // ['Poly', 'Mango', 'Ajax']
 
 console.log(getAllPropValues(users, 'mood')); // ['happy', 'blissful', 'tired']
